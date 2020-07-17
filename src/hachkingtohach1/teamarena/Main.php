@@ -264,67 +264,6 @@ class Main extends PluginBase implements Listener {
 	
 	/**
 	 * 
-	 * @param Level $level
-	 */
-	public function saveMap(Level $level) {
-		$server = $this->getServer();
-		$levelfolder = $level->getFolderName();
-		$DS = DIRECTORY_SEPARATOR;
-		$path = $server->getDataPath();
-        if(!file_exists($path."worlds".$DS.$levelfolder)) {
-            return;
-        }
-        $level->save(true);
-        $levelpath = $path."worlds".$DS.$levelfolder;
-        $zippath = $path."saves".$DS.$levelfolder.".zip";
-        $zip = new \ZipArchive();
-        if(is_file($zippath)) {
-            unlink($zippath);
-        }
-        $zip->open($zippath, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
-        $files = new \RecursiveIteratorIterator(
-		    new \RecursiveDirectoryIterator(realpath($levelpath)),
-			\RecursiveIteratorIterator::LEAVES_ONLY
-		);
-        foreach ($files as $file) {
-            if($file->isFile()) {
-                $filepath = $file->getPath().$DS.$file->getBasename();
-                $localpath = substr($filepath, strlen($path."worlds"));
-                $zip->addFile($filepath, $localpath);
-            }
-        }
-        $zip->close();
-    }
-	
-	/**
-	 *
-     * @param string $name
-     * @return Level $level
-     */
-    public function loadMap(string $name): ?Level {
-		$server = $this->getServer();
-		$path = $server->getDataPath();
-		$DS = DIRECTORY_SEPARATOR;
-        if(!file_exists($path."worlds".$DS.$name)) {
-            return null;
-        }
-        if(!$server->isLevelGenerated($name)) {
-            return null;
-        }
-        if($server->isLevelLoaded($name)) {
-            $server->getLevelByName($name)->unload(true);
-        }
-        $zippath = $this->getDataFolder()."saves".$DS.$name.".zip";
-        $ziparchive = new \ZipArchive();
-        $ziparchive->open($zippath);
-        $ziparchive->extractTo($path . "worlds");
-        $ziparchive->close();
-        $server->loadLevel($name);
-        return $server->getLevelByName($name);
-    }
-	
-	/**
-	 * 
 	 * @param BlockBreakEvent $event
 	 */
 	public function onBreak(BlockBreakEvent $event) {
