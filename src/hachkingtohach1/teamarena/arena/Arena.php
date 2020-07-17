@@ -334,14 +334,7 @@ class Arena implements Listener {
             $sign->setText($sgnt[0], $sgnt[1], $sgnt[2], $sgnt[3]);
 		}
 	}
-    
-	/**
-	 * 
-	 * To get team for one player
-	 * 
-	 * @param Player $player
-	 * @return string
-	 */
+	
     public function getTeamP(Player $player) {
 		$namep = $player->getName();
 		$plugin = $this->plugin;
