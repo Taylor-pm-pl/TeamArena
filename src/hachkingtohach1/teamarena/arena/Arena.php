@@ -41,7 +41,7 @@ use pocketmine\event\Listener;
 
 class Arena implements Listener {
 	
-	/** @var $plugin */
+	/** @var Main $plugin */
 	public $plugin;
 	
 	/** @var array $data */
