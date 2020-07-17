@@ -1,0 +1,14 @@
+name: TeamArena
+author: hachkingtohach1
+description: TeamArena. The minegame plugin for PocketMine-MP
+main: hachkingtohach1\teamarena\Main
+api: 3.14.0
+version: 1.0.0
+softdepend: ["KillCounter"]
+mcpe-protocol: [361, 388, 389, 390, 407]
+
+commands:
+    mypos:
+        description: /mypos to check pos at here!
+    blockpos:
+        description: /blockpos to check pos at one block!

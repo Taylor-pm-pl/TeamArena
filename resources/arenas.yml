@@ -1,0 +1,13 @@
+---
+arena: 
+        spawn_random: ["243,66,244", "264,67,230"]
+        #protect_areas: [["123,126,67", "232,126,57"]]
+        per_team: 11
+        finish_points: 100
+        restarting: false
+        name: "arena"              
+        level: "arena"
+        name_data: "arena"
+        status: "enable"  
+        joinsign: ["255,5,260", "world"]  
+...

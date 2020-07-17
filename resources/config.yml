@@ -1,0 +1,16 @@
+---
+# Support: EconomyAPI
+economy: "EconomyAPI"
+
+# Sign
+line_1: "[TeamArena]"
+line_2: "%map"
+line_3: "%slots/%maxslots"
+line_4: "Tap to join"
+
+# Message
+arena_is_restarting: "Arena is restarting..."  
+arena_is_full: "Arena is full!"
+joined: "You joined the game!"
+kill_by: "%player was killed by %killer"
+...
