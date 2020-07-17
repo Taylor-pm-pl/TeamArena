@@ -2,6 +2,7 @@
 One plugin minigame for pocketmine-pmmp
 
 # How to setup ?
+- You need install plugins: ```EconomyAPI, KillCounter```;
 - This is config for arenas(arenas.yml):
 ```
 arena: 
