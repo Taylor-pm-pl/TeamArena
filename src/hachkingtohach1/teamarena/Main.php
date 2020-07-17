@@ -83,16 +83,16 @@ class Main extends PluginBase implements Listener {
 	/** @var int $time_refill */
 	public $time_refill = 180;
 	
-	/** @var $api */
+	/** @var null $api */
 	public $api = null;
 	
-	/** @var $configa */
+	/** @var null $configa */
 	public $configa = null;
 	
-	/** @var $events */
+	/** @var null $events */
 	public $events = null;
 	
-	/** @var $economy */
+	/** @var null $economy */
 	public $economy = null;
 	
     public function onEnable() : void {		
@@ -207,7 +207,7 @@ class Main extends PluginBase implements Listener {
 	/**
 	 *
 	 * @param Player $player
-	 * @param $amount
+	 * @param float $amount
 	 */
 	public function addCoins(Player $player, float $amount) {
 		$cf = $this->getConfig();
@@ -222,7 +222,7 @@ class Main extends PluginBase implements Listener {
 	/**
 	 *
 	 * @param Player $player
-	 * @param $amount
+	 * @param float $amount
 	 */
 	public function takeCoins(Player $player, float $amount) {
 		$cf = $this->getConfig();
