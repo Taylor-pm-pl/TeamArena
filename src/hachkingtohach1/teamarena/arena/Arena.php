@@ -157,15 +157,15 @@ class Arena implements Listener {
 		$green = $i['green'];
 		$f = $i['finish_points'];
 		if($red >= $f and $blue < $f 
-		and $green < $f and $yellow < $f) {
+		and $green < $f) {
 			return "§cRed";
 		}
 		if($blue >= $f and $red < $f 
-		and $green < $f and $yellow < $f) {
+		and $green < $f) {
 			return "§1Blue";
 		}
 		if($green >= $f and $blue < $f 
-		and $red < $f and $yellow < $f) {
+		and $red < $f) {
 			return "§aGreen";
 		}
 		return "not";
