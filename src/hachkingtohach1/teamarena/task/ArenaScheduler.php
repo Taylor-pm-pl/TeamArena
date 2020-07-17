@@ -58,12 +58,13 @@ class ArenaScheduler extends Task {
 					$level = $arena->plugin->getServer()->getLevelByName($i['level']);
 				    $end = $arena->checkEnd($i['name_data']);
 				    if($end != "not") {
+					    
 					    foreach($level->getPlayers() as $player) {
 						    $player->sendMessage('Team '.$end.' won the game!');
 						    $arena->restartPlayer($player);
 							$player->teleport($arena->plugin->getServer()->getDefaultLevel()->getSpawnLocation());
-					    }
-					    $arena->restartArena($i['name_data'], $player);
+					    }	
+			                    $arena->restartArena($i['name_data']);
 				    }
 					if($arena->plugin->time_refill == 0) {
 						foreach($level->getPlayers() as $player) {
