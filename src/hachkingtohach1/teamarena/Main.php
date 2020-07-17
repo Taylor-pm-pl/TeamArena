@@ -226,16 +226,8 @@ class Main extends PluginBase implements Listener {
 				$this->economy->reduceMoney($player, $amount);
 			break;
 		}		
-	}
-	
-	/**
-	 *
-	 * To fill for chest when player touch the chest
-	 *
-	 * @param InventoryOpenEvent $chest
-	 * @param Player $player
-	 */
-	public function fillChest(InventoryOpenEvent $chest, Player $player) {
+	}	
+	public function fillChest($chest, Player $player) {
 		$items = ChestItems::$items;
 		$block = $chest->getInventory()->getHolder();
 		$data = $block->getX().",".$block->getY().",".$block->getZ();
