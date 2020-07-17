@@ -297,6 +297,7 @@ class Arena implements Listener {
                 "--------",
                 "--------"				
             ];
+				/** @var Sign $sign */
                 $sign = $signpos->getLevel()->getTile($signpos);
                 $sign->setText($sgnt[0], $sgnt[1], $sgnt[2], $sgnt[3]);
                 return;
@@ -330,6 +331,7 @@ class Arena implements Listener {
 			    $sgnt[2] = "Restarting...";
 			    $sgnt[3] = "--------";
 			}
+			/** @var Sign $sign */
 			$sign = $signpos->getLevel()->getTile($signpos);
             $sign->setText($sgnt[0], $sgnt[1], $sgnt[2], $sgnt[3]);
 		}
