@@ -83,16 +83,9 @@ class Main extends PluginBase implements Listener {
 	/** @var int $time_refill */
 	public $time_refill = 180;
 	
-	/** @var null $api */
 	public $api = null;
-	
-	/** @var null $configa */
 	public $configa = null;
-	
-	/** @var null $events */
 	public $events = null;
-	
-	/** @var null $economy */
 	public $economy = null;
 	
     public function onEnable() : void {		
