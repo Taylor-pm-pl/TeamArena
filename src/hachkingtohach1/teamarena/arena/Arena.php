@@ -23,6 +23,7 @@ namespace hachkingtohach1\teamarena\arena;
 use hachkingtohach1\teamarena\Main;
 use hachkingtohach1\teamarena\math\Vector3;
 use hachkingtohach1\teamarena\task\ArenaScheduler;
+use pocketmine\tile\Sign;
 use pocketmine\Player;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
