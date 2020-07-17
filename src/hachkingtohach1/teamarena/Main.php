@@ -34,6 +34,7 @@ use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\event\server\DataPacketReceiveEvent;
 use pocketmine\network\mcpe\protocol\ModalFormRequestPacket;
 use pocketmine\network\mcpe\protocol\ModalFormResponsePacket;
+use pocketmine\event\inventory\InventoryOpenEvent;
 use pocketmine\command\{Command,CommandSender};
 
 class Main extends PluginBase implements Listener {
@@ -234,7 +235,7 @@ class Main extends PluginBase implements Listener {
 	 * @param $chest
 	 * @param Player $player
 	 */
-	public function fillChest($chest, Player $player) {
+	public function fillChest(InventoryOpenEvent $chest, Player $player) {
 		$items = ChestItems::$items;
 		$block = $chest->getInventory()->getHolder();
 		$data = $block->getX().",".$block->getY().",".$block->getZ();
