@@ -209,7 +209,7 @@ class Main extends PluginBase implements Listener {
 	 * @param Player $player
 	 * @param $amount
 	 */
-	public function addCoins(Player $player, $amount) {
+	public function addCoins(Player $player, float $amount) {
 		$cf = $this->getConfig();
 		$namep = $player->getName();
 		switch($cf->get('economy')) {
@@ -224,7 +224,7 @@ class Main extends PluginBase implements Listener {
 	 * @param Player $player
 	 * @param $amount
 	 */
-	public function takeCoins(Player $player, $amount) {
+	public function takeCoins(Player $player, float $amount) {
 		$cf = $this->getConfig();
 		$namep = $player->getName();
 		switch($cf->get('economy')) {
