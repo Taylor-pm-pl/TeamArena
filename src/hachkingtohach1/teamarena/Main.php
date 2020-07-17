@@ -78,10 +78,10 @@ class Main extends PluginBase implements Listener {
     public $sentforms = [];
 	
 	/** @var $api */
-	public $api;
+	public $api = null;
 	
 	/** @var $configa */
-	public $configa;
+	public $configa = null;
 	
 	/** @var int $lastid */
     public $lastid = 0;
