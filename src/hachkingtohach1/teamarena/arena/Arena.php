@@ -222,7 +222,6 @@ class Arena implements Listener {
 	 * To restart data for arena
 	 * 
 	 * @param string $name
-	 * @param Player $player
 	 */
 	public function restartArena(string $name) {
 		$plugin = $this->plugin;
