@@ -265,13 +265,11 @@ class Arena implements Listener {
 		$namep = $player->getName();
 		foreach($plugin->arenas as $i) {
 			$players = $i['players'];
-			var_dump($i['players']);
 			foreach($players as $p) {
 			    if($p->getName() == $namep) {
 				    unset($i['players'][$namep]);
 		        }
 			}
-			var_dump($i['players']);
 		}
 	}
 	
