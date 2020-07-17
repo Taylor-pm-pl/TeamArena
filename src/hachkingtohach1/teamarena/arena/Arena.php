@@ -140,9 +140,6 @@ class Arena implements Listener {
 		if(isset($plugin->green[$namep])) {
 			unset($plugin->green[$namep]);
 		}
-		if(isset($plugin->yellow[$namep])) {
-			unset($plugin->yellow[$namep]);
-		}
 	}
 
     /**
