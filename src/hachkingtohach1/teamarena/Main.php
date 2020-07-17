@@ -279,7 +279,7 @@ class Main extends PluginBase implements Listener {
 						'z= '.(int)$block->getZ()
 					);
                     unset($this->setup[$namep]);
-                    $event->setCancelled(\true);
+                    $event->setCancelled(true);
                 break;
 			}
 		}
