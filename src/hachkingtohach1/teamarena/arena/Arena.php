@@ -102,15 +102,15 @@ class Arena implements Listener {
 		if($chooseteam == 'R') {
 			$plugin->red[$namep] = $player;
 			$this->setNameTagT($player, "§c");
-			$chooseteam = 'B';
+			$plugin->chooseteam[$name] = 'B';
 		} elseif($chooseteam == 'B') {
 			$plugin->blue[$namep] = $player;
 			$this->setNameTagT($player, "§1");
-			$chooseteam = 'G';
+			$plugin->chooseteam[$name] = 'G';
 		} elseif($chooseteam == 'G') {
 			$plugin->green[$namep] = $player;
 			$this->setNameTagT($player, "§a");
-			$chooseteam = 'R';
+			$plugin->chooseteam[$name] = 'R';
 		}
 		$plugin->ingame[$namep] = $player;       
         $this->getBaseKit($player);		
