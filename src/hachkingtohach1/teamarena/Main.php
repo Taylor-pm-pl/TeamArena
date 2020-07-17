@@ -232,7 +232,7 @@ class Main extends PluginBase implements Listener {
 	 *
 	 * To fill for chest when player touch the chest
 	 *
-	 * @param $chest
+	 * @param InventoryOpenEvent $chest
 	 * @param Player $player
 	 */
 	public function fillChest(InventoryOpenEvent $chest, Player $player) {
