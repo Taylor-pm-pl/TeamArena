@@ -224,11 +224,9 @@ class Arena implements Listener {
 	 * @param string $name
 	 * @param Player $player
 	 */
-	public function restartArena(string $name, Player $player) {
+	public function restartArena(string $name) {
 		$plugin = $this->plugin;
 		$cf = $plugin->configa;
-		$namep = $player->getName();
-		unset($plugin->arenas[$name]['players'][$namep]);
 		$plugin->timecount[$name] = 10;
 		$plugin->arenas[$name]['restarting'] = true;		
 	}
