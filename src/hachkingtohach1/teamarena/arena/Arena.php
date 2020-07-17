@@ -53,7 +53,7 @@ class Arena implements Listener {
 	/** @var array $borrow_2 */
 	public $borrow_2 = array();
 	
-	/** @var $scheduler */
+	/** @var ArenaScheduler $scheduler */
 	public $scheduler;
 	
     public function __construct(Main $plugin) {		
