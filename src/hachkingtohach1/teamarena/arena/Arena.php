@@ -297,14 +297,14 @@ class Arena implements Listener {
 			);
 			$level = $signpos->getLevel();
             if(!$level instanceof Level) return;
-            if($level->getTile($signpos) === null) return;
-			$sgnt = [
+            if($level->getTile($signpos) === null) return;			
+			if($i['status'] === "disable") {
+				$sgnt = [
                 "???name???",
                 "--------",
                 "--------",
                 "--------"				
             ];
-			if($i['status'] === "disable") {
                 $sign = $signpos->getLevel()->getTile($signpos);
                 $sign->setText($sgnt[0], $sgnt[1], $sgnt[2], $sgnt[3]);
                 return;
