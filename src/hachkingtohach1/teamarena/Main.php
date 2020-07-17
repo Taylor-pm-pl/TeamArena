@@ -195,6 +195,7 @@ class Main extends PluginBase implements Listener {
 	public function getCoins(Player $player) {
 		$cf = $this->getConfig();
 		$namep = $player->getName();
+		$coins = null;
 		switch($cf->get('economy')) {
 			case "EconomyAPI":
 				$coins = $this->economy->myMoney($player);
