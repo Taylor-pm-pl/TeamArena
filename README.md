@@ -1,7 +1,7 @@
-# TeamArena
+# TeamArena ⚔
 One plugin minigame for pocketmine-pmmp
 
-# How to setup ?
+# How to setup ? 🛠
 - You need install plugins: ```EconomyAPI, KillCounter```;
 - This is config for arenas(arenas.yml):
 ```
@@ -39,7 +39,7 @@ joined: "You joined the game!"
 kill_by: "%player was killed by %killer"
 ```
 
-# Support
+# Support 💁‍♂️
 Thanks for downloading!
 - Email: pnam5005@gmail.com
 
