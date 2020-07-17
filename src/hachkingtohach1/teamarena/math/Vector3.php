@@ -33,11 +33,4 @@ class Vector3 extends \pocketmine\math\Vector3 {
 			(int)explode(",", $string)[2]
 		);
     }
-	
-    /**
-     * @return string
-     */
-    public function __toString() {
-        return "$this->x,$this->y,$this->z";
-    }
 }
