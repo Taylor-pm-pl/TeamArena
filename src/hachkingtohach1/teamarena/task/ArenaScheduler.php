@@ -77,7 +77,7 @@ class ArenaScheduler extends Task {
 			    } else {
 					if(!empty($arena->plugin->timecount[$i['name_data']])) {
 						if($arena->plugin->timecount[$i['name_data']] == 0) {
-							$this->doneRestart($i['name_data']);
+							$arena->doneRestart($i['name_data']);
 							return;
 						} 
 						$arena->plugin->timecount[$i['name_data']]--;
