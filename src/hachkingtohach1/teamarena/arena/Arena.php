@@ -281,11 +281,6 @@ class Arena implements Listener {
 		$plugin->arenas[$name] = $plugin->dataBasicForArena($name);
 	}
 	
-	/**
-	 * 
-	 * To check sign for arenas
-	 * 
-	 */
 	public function reloadSign() {
 		$plugin = $this->plugin;
 		$config = $plugin->getConfig();
@@ -310,7 +305,6 @@ class Arena implements Listener {
                 return;
             }
 			$arena = $plugin->arenas[$i['name_data']];
-			// Check again!
 			foreach($arena['players'] as $p) {
 				if(!isset($plugin->ingame[$p->getName()])) {
 					unset($arena['players'][$p->getName()]);
