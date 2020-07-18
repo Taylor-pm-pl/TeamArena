@@ -64,7 +64,7 @@ class ArenaScheduler extends Task {
 						    $arena->restartPlayer($player);
 							$player->teleport($arena->plugin->getServer()->getDefaultLevel()->getSpawnLocation());
 					    }	
-			                    $arena->restartArena($i['name_data']);
+			            $arena->restartArena($i['name_data']);
 				    }
 					if($arena->plugin->time_refill == 0) {
 						foreach($level->getPlayers() as $player) {

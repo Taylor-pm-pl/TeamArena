@@ -395,8 +395,12 @@ class Arena implements Listener {
 						$plugin->addCoins($damager, 5);
 						$array_1 = ["%player", "%killer"];
 						$array_2 = ["$namee", "$named"];
-						foreach($players as $p) {							
-                            $p->sendMessage(str_replace($array_1, $array_2,$config->get('kill_by')));												    
+						$mess = str_replace($array_1, $array_2,$config->get('kill_by'));
+						foreach($players as $p) {
+							if($this->borrow_1[$p->getName()] !== $mess) {								
+                                $p->sendMessage(str_replace($array_1, $array_2,$config->get('kill_by')));
+							    $this->borrow_1[$p->getName()] = $mess;
+							} 								
 					    }
 			        }
 				}				
@@ -490,7 +494,12 @@ class Arena implements Listener {
             if((!$signPos->equals($block)) or $lvs->getId() != $lvb->getId()) {
                 return;
             }
-			$this->joinArena($player, $i['name_data']);
+			$x = $block->getX();
+			$y = $block->getY();
+			$z = $block->getZ();
+			if($i["joinsign"][0] == "$x,$y,$z") {
+			    $this->joinArena($player, $i['name_data']);
+			}
 		}
 	}
 	
