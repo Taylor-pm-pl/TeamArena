@@ -50,6 +50,7 @@ class ArenaScheduler extends Task {
 				$r = $i['red'];
 				$b = $i['blue'];
 				$g = $i['green'];
+				$cf = $arena->plugin->getConfig();
 			    if($i['restarting'] != true) {
                     if(isset($arena->plugin->ingame[$p->getName()])) {				
 			            $p->sendTip("§aK: ".$kills." D: ".$deaths." G: ".$coins." T: ".$t);
@@ -57,18 +58,18 @@ class ArenaScheduler extends Task {
 				    }
 					$level = $arena->plugin->getServer()->getLevelByName($i['level']);
 				    $end = $arena->checkEnd($i['name_data']);
-				    if($end != "not") {
-					    
+				    if($end != "not") {					    
 					    foreach($level->getPlayers() as $player) {
-						    $player->sendMessage('Team '.$end.' won the game!');
+							$msg = str_replace("%team", "$end", $cf->get('team_won'));
+						    $player->sendMessage($msg);
 						    $arena->restartPlayer($player);
 							$player->teleport($arena->plugin->getServer()->getDefaultLevel()->getSpawnLocation());
 					    }	
 			            $arena->restartArena($i['name_data']);
 				    }
 					if($arena->plugin->time_refill == 0) {
-						foreach($level->getPlayers() as $player) {
-						    $player->sendMessage('All chests were refilled!');
+						foreach($level->getPlayers() as $player) {							
+						    $player->sendMessage($cf->get('chest_refilled'));
 							$arena->plugin->filledchests = [];
 					    }
 						$arena->plugin->time_refill = 180;
