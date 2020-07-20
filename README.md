@@ -24,6 +24,7 @@ arena:
 - And all more you need type it!
 - Design text in the sign at config(config.yml):
 ```
+---
 # Support: EconomyAPI
 economy: "EconomyAPI"
 
@@ -38,6 +39,9 @@ arena_is_restarting: "Arena is restarting..."
 arena_is_full: "Arena is full!"
 joined: "You joined the game!"
 kill_by: "%player was killed by %killer"
+chest_refilled: "All chests were refiled!"
+team_won: "Team %team won the game!"
+...
 ```
 
 # Support 💁‍♂️
