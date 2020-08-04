@@ -397,6 +397,10 @@ class Arena implements Listener {
 						$array_2 = ["$namee", "$named"];
 						$mess = str_replace($array_1, $array_2,$config->get('kill_by'));
 						foreach($players as $p) {
+							if(!isset($this->borrow_1[$p->getName()])) {								
+							    $this->borrow_1[$p->getName()] = $mess;
+							    return;
+							} 
 							if($this->borrow_1[$p->getName()] !== $mess) {								
                                 $p->sendMessage($mess);
 							    $this->borrow_1[$p->getName()] = $mess;
